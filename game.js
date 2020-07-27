@@ -4,9 +4,11 @@ var squares = document.querySelectorAll('.square');
 var colorDisplay = document.querySelector('#colorDisplay');
 var messageDisplay = document.querySelector('#message');
 var h1 = document.querySelector('h1');
+var resetButton = document.querySelector('#resetButton');
 var pickedColor = pickColor();
 
 colorDisplay.textContent = pickedColor.toUpperCase();
+
 // Assign colors to squares
 for (var i = 0; i < squares.length; i++) {
   squares[i].style.backgroundColor = colors[i];
@@ -26,6 +28,11 @@ for (var i = 0; i < squares.length; i++) {
     }
   });
 }
+
+// click listener to reset button
+resetButton.addEventListener('click', function () {
+  generateRandomColors();
+});
 
 function changeColor(color) {
   // loop through all squares
