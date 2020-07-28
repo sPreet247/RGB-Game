@@ -59,11 +59,13 @@ resetButton.addEventListener('click', function () {
   // change color display to match pickedColor
   colorDisplay.textContent = pickedColor;
   // Assign new colors to squares
+  messageDisplay.textContent = '';
+  this.textContent = 'New colors';
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i];
   }
   // Reset the h1
-  h1.style.backgroundColor = '#232323';
+  h1.style.backgroundColor = 'steelBlue';
 });
 
 // Assign colors to squares
@@ -121,6 +123,6 @@ function randomColors() {
   var g = Math.floor(Math.random() * 256);
   // pick blue value from 0 - 255
   var b = Math.floor(Math.random() * 256);
-  ('rgb(r, g, b)');
+
   return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
